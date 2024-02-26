@@ -1,20 +1,13 @@
 
-#include "Fraction.h"
+#include "Fraction.h"	
 #include <iostream>
 #include <cmath>
 
 Fraction::Fraction(const int numerator, const int denominator)
-//ѕерва€ очередь инициализации
 	: m_numerator(numerator)
-	/*, m_denominator(denominator) */ //Ќе инициализируем здесь, нужны доп. проверки.
-		//¬тора€ очередь инициализации дл€ тех полей, коотрых не было в первой очереди (см. .h)
 {
-	//“реть€ очередь инициализации. —ейчас m_numerator == numerator, m_denominator == 1
-
-
 	if (denominator == 0) {
 		std::cerr << "Fraction::Fraction: error: denominator is 0, result will be numerator/1.\n";
-		//Ќичего не мен€ем, m_denominator и так == 1
 	}
 	else {
 		m_denominator = denominator;
@@ -44,7 +37,6 @@ void Fraction::setNumerator(const int value)
 void Fraction::setDenominator(const int value)
 {
 	if (value == 0) {
-		//≈сли знаменатель неправильный, ничего не делаем. ’от€ можно было бы положить 1, как в конструкторе.
 		std::cerr << "Fraction::setDenominator: error: value is 0, won't assign.\n";
 		return;
 	}

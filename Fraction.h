@@ -3,7 +3,7 @@
 class Fraction
 {
 public:
-	Fraction() = default; //Сработает вторая очередь инициализации, получим дробь 0/1
+	Fraction() = default;
 	Fraction(const int numerator, const int denominator);
 	~Fraction() = default;
 
